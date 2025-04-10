@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.xcodey.com/social/link/index.html</loc>
+    
+    <lastmod>2025-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.xcodey.com/site/time/index.html</loc>
     
     <lastmod>2025-04-10</lastmod>
@@ -56,33 +65,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xcodey.com/social/link/index.html</loc>
-    
-    <lastmod>2025-04-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xcodey.com/life/movies/index.html</loc>
-    
-    <lastmod>2025-04-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xcodey.com/life/music/index.html</loc>
-    
-    <lastmod>2025-04-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xcodey.com/personal/bb/index.html</loc>
     
     <lastmod>2025-04-09</lastmod>
@@ -101,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://blog.xcodey.com/categories/index.html</loc>
+    <loc>https://blog.xcodey.com/life/music/index.html</loc>
     
     <lastmod>2025-04-09</lastmod>
     
@@ -110,7 +92,16 @@
   </url>
   
   <url>
-    <loc>https://blog.xcodey.com/box/gallery/index.html</loc>
+    <loc>https://blog.xcodey.com/life/movies/index.html</loc>
+    
+    <lastmod>2025-04-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xcodey.com/categories/index.html</loc>
     
     <lastmod>2025-04-09</lastmod>
     
@@ -129,6 +120,15 @@
   
   <url>
     <loc>https://blog.xcodey.com/box/nav/index.html</loc>
+    
+    <lastmod>2025-04-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xcodey.com/box/gallery/index.html</loc>
     
     <lastmod>2025-04-09</lastmod>
     
