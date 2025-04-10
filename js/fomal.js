@@ -1285,8 +1285,8 @@ function share_() {
   try {
     // 截取标题
     var title = document.title;
-    var subTitle = title.endsWith("| Orange🍊") ? title.substring(0, title.length - 14) : title;
-    navigator.clipboard.writeText('Orange🍊的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n欢迎来访！🍭🍭🍭');
+    var subTitle = title.endsWith("| 橘子🍊") ? title.substring(0, title.length - 14) : title;
+    navigator.clipboard.writeText('橘子🍊的站内分享\n标题：' + subTitle + '\n链接：' + url + '\n🍻欢迎来访！\n\n');
     new Vue({
       data: function () {
         this.$notify({
