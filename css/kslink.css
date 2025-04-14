@@ -1,0 +1,49 @@
+/* 添加友链按钮 */
+/* 快速填写格式 */
+.addBtn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.addBtn button {
+    transition: .2s;
+    display: flex;
+    margin: 5px auto;
+    color: var(--global-bg);
+    padding: 15px;
+    border-radius: 40px;
+    background: var(--search-result-title);
+    align-items: center;
+}
+
+button {
+    padding: 0;
+    outline: 0;
+    border: none;
+    background: 0 0;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.addBtn i {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+.addBtn button:hover {
+    background: var(--theme-color);
+    color: #fff;
+}
+/* :root {
+    --cursor-arrow: url("/img/cur/arrow.cur");
+    --cursor-backrunning: url("/img/cur/backrunning.cur");
+    --cursor-ban: url("/img/cur/ban.cur");
+    --cursor-busy: url("/img/cur/busy.cur");
+    --cursor-handwriting: url("/img/cur/handwriting.cur");
+    --cursor-help: url("/img/cur/help.cur");
+    --cursor-link: url("/img/cur/link.cur");
+    --cursor-move: url("/img/cur/move.cur");
+    --cursor-input: url("/img/cur/input.cur");
+} */
