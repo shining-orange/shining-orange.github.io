@@ -7702,6 +7702,7 @@ button#go-up:hover #percent {
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
   background-image: url(https://imgs.catoi.cn/v2/dcZ7YYN.png);
+  /* background-image: url(/img/spring.webp); */
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
@@ -8624,6 +8625,7 @@ li.categoryBar-list-item {
   width: 100px;
   height: 100px;
   background-image: url("https://bu.dusays.com/2022/07/20/62d812d95e6f5.png");
+  /* background-image: url("/assets/yun.png"); */
   background-size: contain;
   z-index: 9999;
   position: absolute;
@@ -9210,6 +9212,7 @@ figure.highlight pre .deletion {
   position: relative;
   border-radius: 12px;
   background-image: url(https://tuchuang.voooe.cn/images/2023/01/02/tunian.webp);
+  /* background-image: url("/assets/tunian.webp"); */
   background-size: cover;
   background-position: center;
 }
