@@ -7043,7 +7043,8 @@ div#archive {
   left: -13px;
   border-top: 2px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 15px solid transparent; /*默认模式访客气泡小三角配色*/
+  /*border-right: 15px solid transparent;*/ /*默认模式访客气泡小三角配色*/
+  border-right: 15px solid #9c78af; /*默认模式访客气泡小三角配色*/
   border-left: 0px solid transparent;
 }
 .tk-master .tk-content {
@@ -7068,7 +7069,8 @@ div#archive {
   left: -13px;
   border-top: 2px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 15px solid transparent; /*默认模式博主气泡小三角配色*/
+  /*border-right: 15px solid transparent;*/ /*默认模式博主气泡小三角配色*/
+  border-right: 15px solid #00464dad;; /*默认模式博主气泡小三角配色*/
   border-left: 0px solid transparent;
 }
 .tk-row[data-v-d82ce9a0] {
@@ -7116,7 +7118,8 @@ div#archive {
   }
   .tk-master .tk-content::before {
     left: 100%;
-    border-left: 15px solid transparent;
+    /* border-left: 15px solid transparent; */
+    border-left: 15px solid #00464dad;
     border-right: 0px solid transparent;
   }
   .tk-master .tk-avatar {
