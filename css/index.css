@@ -2883,7 +2883,7 @@ h1.page-title + .tag-cloud-list {
   margin: 6px 0 -6px;
 }
 #aside-content .card-info .card-info-social-icons .social-icon {
-  margin: 0 10px;
+  margin: 0 9px;
   color: var(--font-color);
   font-size: 1.4em;
 }
@@ -6526,6 +6526,8 @@ blockquote.pullquote.right {
   --hltools-bg: #1c1c1c;
   /* 代码框背景色 */
   --hl-bg: #282c34;
+  --sidebar-menu-bg: rgba(255, 255, 255, 0.439);
+  
 }
 
 /* 滚动条样式 */
@@ -7341,7 +7343,7 @@ h6::before {
 
 /* 侧边卡片栏宽度 */
 .aside-content {
-  max-width: 318px;
+  max-width: 330px;
   min-width: 300px;
 }
 
@@ -8212,8 +8214,37 @@ a:hover {
   border-radius: 15px;
 }
 
+#sidebar #sidebar-menus .author-info__name {
+  font-weight: 500;
+  font-size: 1.57em;
+  text-align: center;
+}
+
+#sidebar #sidebar-menus .author-info__description {
+  text-align: center;
+  margin-bottom: 5px;
+}
+#sidebar #sidebar-menus .card-info-social-icons .social-icon {
+  margin: 0 10px;
+  color: var(--font-color);
+  font-size: 1.4em;
+}
+
+#sidebar #sidebar-menus .menus_items{
+  /*-webkit-box-shadow: 0 0 1px 1px rgba(7, 17, 27, .05); */
+  box-shadow: 0 0 1px 1px rgba(7, 17, 27, .05);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 15px;
+  background: var(--sidebar-menu-bg);
+}
+
+#sidebar #sidebar-menus>.avatar-img {
+  margin: 20px auto 0;
+}
 /* 手机菜单栏渐变色适配暗黑模式 */
 [data-theme="dark"] #sidebar #sidebar-menus {
+  --sidebar-menu-bg: #1f1f1f;
   background: rgba(25, 25, 25, 0.95) !important;
 }
 
@@ -8247,6 +8278,24 @@ div#rightside {
 /* 标签圆角 */
 .hl-label {
   border-radius: 8px;
+}
+
+
+#sidebar #sidebar-menus #card-info-btn-bar {
+  display: block;
+  background-color: var(--theme-color);
+  color: var(--btn-color);
+  text-align: center;
+  line-height: 2.4;
+  border-radius: 10px;
+  margin: 10px 20px 0 20px;
+}
+
+#sidebar #sidebar-menus #card-info-btn-bar .sidebar-span{
+  margin-left: 40px;
+}
+#sidebar-menus.open > :nth-child(8) {
+  animation: 1.4s ease 0s 1 normal none running sidebarItem;
 }
 
 /* 透明度和模糊半径滑块 */
@@ -8808,7 +8857,7 @@ span.card-clock-weather {
 /* 自定义底部  start */
 #ft {
   max-width: 1200px;
-  margin: 0 auto 12px;
+  margin: 0 auto 8px;
   display: flex;
   color: rgb(255 255 255 / 80%) !important;
   text-align: left;
@@ -8844,7 +8893,7 @@ span.card-clock-weather {
 }
 
 .t-top .t-t-l .bg-ad {
-  width: 85%;
+  width: 94%;
   border-radius: 10px;
   padding: 0 10px;
 }
@@ -8875,6 +8924,9 @@ span.card-clock-weather {
   flex-direction: column;
   flex: 1;
 }
+.textCenter{
+  text-align: center;
+}
 
 .ft-links {
   padding: 0 14px;
@@ -8884,7 +8936,7 @@ span.card-clock-weather {
 
 .ft-links li a {
   display: inline-block !important;
-  width: 50%;
+  width: 33%;
 }
 
 .ft-links li a:hover {
@@ -8903,15 +8955,40 @@ span.card-clock-weather {
   font-weight: 600;
 }
 
+.pfooterl{
+  font-size: 1.63rem;
+  padding-bottom: 0rem;
+  padding-top: 0.2rem;
+}
+
+.pfooterc{
+  font-size: 1.25rem;
+  padding-bottom: 1.4rem;
+  display: inline-block;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--theme-color);
+  text-align: center;
+}
+
+.pfooterr{
+  font-size: 1.25rem;
+  padding-bottom: 1.4rem;
+  display: inline-block;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--theme-color);
+  text-align: right;
+}
+
 .t-l-t {
   padding-left: 14px;
 }
 
 .ft-item-2 .ft-img-group .img-group-item {
   display: inline-block;
-  width: 18.4%;
-  margin-right: 14px;
-  margin-bottom: 6px;
+  width: 12.997%;
+  margin: 3px 7px 6px 7px;
 }
 
 .ft-item-2 .ft-img-group .img-group-item a {
