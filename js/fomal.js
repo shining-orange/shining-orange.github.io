@@ -67,13 +67,13 @@ function scrollToTop() {
 
 //----------------------------------------------------------------
 
-/* 欢迎信息 start */
+/* 欢迎信息 KEY start */
 //get请求
 $.ajax({
   type: 'get',
   url: 'https://apis.map.qq.com/ws/location/v1/ip',
   data: {
-    key: 'A6GBZ-FPAKQ-KND53-BQW4T-PWDEF-ZTB7Y',  // 这里要写你的KEY!!!
+    key: 'A6GBZ-FPAKQ-KND53-BQW4T-PWDEF-ZTB7Y',
     output: 'jsonp',
   },
   dataType: 'jsonp',
@@ -97,13 +97,13 @@ function getDistance(e1, n1, e2, n2) {
   return Math.round(r);
 }
 
+ //经纬度
 function showWelcome() {
 
-  let dist = getDistance(113.34499552, 23.15537143, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里换成自己的经纬度
+  let dist = getDistance(115.39957523345949, 30.163940822189275, ipLoacation.result.location.lng, ipLoacation.result.location.lat);
   let pos = ipLoacation.result.ad_info.nation;
   let ip;
   let posdesc;
-  //根据国家、省份、城市信息自定义欢迎语
   switch (ipLoacation.result.ad_info.nation) {
     case "日本":
       posdesc = "よろしく，一起去看樱花吗";
@@ -1166,7 +1166,7 @@ function createtime2() {
       "color:white; background-color:#10bcc0",
       "",
       "",
-      'background:url("https://unpkg.zhimg.com/anzhiyu-assets@latest/image/common/tinggge.gif") no-repeat;font-size:450%'
+      'background:url("https://i1.wp.com/dev.ruom.top/i/2025/04/24/112478.webp") no-repeat;font-size:450%'
     )
   );
 
@@ -2524,7 +2524,13 @@ if (m == 12 && dd == 25) {//圣诞节
 }
 if (m == 8 && dd == 11) {//站长生日
   if (sessionStorage.getItem("isPopupWindow") != "1") {
-    Swal.fire("祝站长" + (y - 1998).toString() + "岁生日快乐！🥝");
+    Swal.fire("祝站长阳历" + (y - 2002).toString() + "岁生日快乐！🍊");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if (m == 9 && dd == 9) {//菁菁生日
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    Swal.fire("祝宝宝阳历" + (y - 1994).toString() + "岁生日快乐！🐱");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -2575,10 +2581,24 @@ if ((lunar["IMonthCn"] == "五月" && lunar["IDayCn"] == "初五")) {
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
+if ((lunar["IMonthCn"] == "七月" && lunar["IDayCn"] == "初三")) {
+  //站长生日
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    Swal.fire("祝站长农历生日快乐！\n请你吃一大份蛋糕🍰");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
 if ((lunar["IMonthCn"] == "七月" && lunar["IDayCn"] == "初七")) {
   //七夕节
   if (sessionStorage.getItem("isPopupWindow") != "1") {
     Swal.fire("七夕节快乐\n黄昏后,柳梢头,牛郎织女来碰头");
+    sessionStorage.setItem("isPopupWindow", "1");
+  }
+}
+if ((lunar["IMonthCn"] == "八月" && lunar["IDayCn"] == "初四")) {
+  //菁菁生日
+  if (sessionStorage.getItem("isPopupWindow") != "1") {
+    Swal.fire("祝宝宝农历生日快乐！\n请你吃一大份蛋糕🍰");
     sessionStorage.setItem("isPopupWindow", "1");
   }
 }
@@ -3151,34 +3171,36 @@ function changeBgColor() {
 }
 
 // 必应每日壁纸API
-let bingDayBg = screen.width <= 768 ? "url(https://bing.img.run/m.php)" : "url(https://bing.img.run/1920x1080.php)";
+let bingDayBg = screen.width <= 768 ? "url(https://api.vvhan.com/api/bing)" : "url(https://api.vvhan.com/api/bing)";
 // 必应历史壁纸API
-let bingHistoryBg = screen.width <= 768 ? "url(https://bing.img.run/rand_m.php)" : "url(https://bing.img.run/rand.php)";
+let bingHistoryBg = screen.width <= 768 ? "url(https://api.miaomc.cn/image/other/360pic)" : "url(https://api.miaomc.cn/image/other/360pic)";
 // EEE.DOG
-let EEEDog = "url(https://api.yimian.xyz/img?type=moe&size=1920x1080)";
+let EEEDog = "url(https://api.vvhan.com/api/wallpaper/pcGirl)";
 // 随机美图cdn.seovx.com
 let seovx = "url(https://cdn.seovx.com/?mom=302)";
 // picsum随机
 let picsum = "url(https://picsum.photos/1920/1080.webp)";
-// 小歪二次元
-// let waiDongman = "url(https://api.ixiaowai.cn/api/api.php)";
 //  小歪高清壁纸
 let waiBizhi = "url(https://api.ixiaowai.cn/gqapi/gqapi.php)";
-// 博天随机
-let btstu = "url(http://api.btstu.cn/sjbz/?lx=suiji)";
-// tuapi 动漫
-// let tuapi = "url(https://tuapi.eees.cc/api.php?category=dongman)";
-// unsplash随机 https://source.unsplash.com/random/1920x1080/daily (weekly)
+// 随机壁纸api
+let btstu = "url(https://img.qwe123.eu.org/pc/pc?sort=pc)";
+//  unsplash
 let unsplash = "url(https://source.unsplash.com/random/1920x1080/)";
 
 
 // 更换背景(自己的代码)
+
+
+  // --default-bg: url(https://imgs.catoi.cn/v2/YPBIJEw.jpeg);
+  // --darkmode-bg:url(https://imgs.xcodey.com/v2/klASni0.jpeg);
+  // --mobileday-bg: url(https://imgs.catoi.cn/v2/39oEcWb.jpeg);
+  // --mobilenight-bg: url(https://imgs.catoi.cn/v2/oe9oV86.png);
 if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://imgs.catoi.cn/v2/YPBIJEw.jpeg);
-    --darkmode-bg:url(https://imgs.xcodey.com/v2/klASni0.jpeg);
+    --default-bg: url(https://i1.wp.com/dev.ruom.top/i/2025/04/24/296483.webp);
+    --darkmode-bg:url(https://i1.wp.com/dev.ruom.top/i/2025/04/24/483217.webp);
     --mobileday-bg: url(https://imgs.catoi.cn/v2/39oEcWb.jpeg);
     --mobilenight-bg: url(https://imgs.catoi.cn/v2/oe9oV86.png);
   }`;
@@ -3410,7 +3432,7 @@ function createWinbox() {
 <h3>1. 二次元</h3>
 <details class="folding-tag" cyan><summary> 查看二次元背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/home_bg.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.mtyqx.cn/tapi/random.php)" class="imgbox" onclick="changeBg('url(https://api.mtyqx.cn/tapi/random.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://i1.wp.com/dev.ruom.top/i/2025/04/24/955976.webp)" class="imgbox" onclick="changeBg('url(https://i1.wp.com/dev.ruom.top/i/2025/04/24/955976.webp)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.vvhan.com/api/wallpaper/acg)" class="imgbox" onclick="changeBg('url(https://api.vvhan.com/api/wallpaper/acg)')"></a></div>
               </div>
             </details>
 
@@ -3419,7 +3441,7 @@ function createWinbox() {
 
 <details class="folding-tag" cyan><summary> 查看风景背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/fj1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/fj1.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://tu.ltyuanfang.cn/api/fengjing.php)" class="imgbox" onclick="changeBg('url(https://tu.ltyuanfang.cn/api/fengjing.php)')"></a><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.vvhan.com/api/wallpaper/views)" class="imgbox" onclick="changeBg('url(https://api.vvhan.com/api/wallpaper/views)')"></a></div>
               </div>
             </details>
 
@@ -3427,7 +3449,7 @@ function createWinbox() {
 
 <details class="folding-tag" cyan><summary> 查看萌宠背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/mc1.webp)" class="imgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/mc1.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.miaomc.cn/image/get)" class="imgbox" onclick="changeBg('url(https://api.miaomc.cn/image/get)')"></a></div>
               </div>
             </details>
 
@@ -3451,7 +3473,7 @@ function createWinbox() {
 <h3>6. 适配手机</h3>
 <details class="folding-tag" cyan><summary> 查看适配手机的背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://lskypro.acozycotage.net/Fomalhaut/img/mb4.webp)" class="pimgbox" onclick="changeBg('url(https://lskypro.acozycotage.net/Fomalhaut/img/mb4.webp)')"></a></div>
+              <div class="bgbox"><a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://api.vvhan.com/api/wallpaper/mobileGirl)" class="pimgbox" onclick="changeBg('url(https://api.vvhan.com/api/wallpaper/mobileGirl)')"></a></div>
               </div>
             </details>
 
@@ -3459,7 +3481,7 @@ function createWinbox() {
 <h3>7. 壁纸API</h3>
 <details class="folding-tag" cyan><summary> 查看壁纸API系列背景 </summary>
               <div class='content'>
-              <div class="bgbox"><a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a><a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a><a id="EEEDogBox" rel="noopener external nofollow" style="background-image: ${EEEDog}" class="box apiBox" onclick="changeBg('${EEEDog}')"></a><a id="seovxBox" rel="noopener external nofollow" style="background-image: ${seovx}" class="box apiBox" onclick="changeBg('${seovx}')"></a><a id="picsumBox" rel="noopener external nofollow" style="background-image: ${picsum}" class="box apiBox" onclick="changeBg('${picsum}')"></a><a id="waiBizhiBox" rel="noopener external nofollow" style="background-image: ${waiBizhi}" class="box apiBox" onclick="changeBg('${waiBizhi}')"></a><a id="btstuBox" rel="noopener external nofollow" style="background-image: ${btstu}" class="box apiBox" onclick="changeBg('${btstu}')"></a><a id="unsplashBox" rel="noopener external nofollow" style="background-image: ${unsplash}" class="box apiBox" onclick="changeBg('${unsplash}')"></a></div>
+              <div class="bgbox"><a id="btstuBox" rel="noopener external nofollow" style="background-image: ${btstu}" class="box apiBox" onclick="changeBg('${btstu}')"></a><a id="seovxBox" rel="noopener external nofollow" style="background-image: ${seovx}" class="box apiBox" onclick="changeBg('${seovx}')"></a><a id="picsumBox" rel="noopener external nofollow" style="background-image: ${picsum}" class="box apiBox" onclick="changeBg('${picsum}')"></a><a id="bingDayBox" rel="noopener external nofollow" style="background-image: ${bingDayBg}" class="box apiBox" onclick="changeBg('${bingDayBg}')"></a><a id="bingHistoryBox" rel="noopener external nofollow" style="background-image: ${bingHistoryBg}" class="box apiBox" onclick="changeBg('${bingHistoryBg}')"></a><a id="EEEDogBox" rel="noopener external nofollow" style="background-image: ${EEEDog}" class="box apiBox" onclick="changeBg('${EEEDog}')"></a><a id="waiBizhiBox" rel="noopener external nofollow" style="background-image: ${waiBizhi}" class="box apiBox" onclick="changeBg('${waiBizhi}')"></a><a id="unsplashBox" rel="noopener external nofollow" style="background-image: ${unsplash}" class="box apiBox" onclick="changeBg('${unsplash}')"></a></div>
               </div>
             </details>
 

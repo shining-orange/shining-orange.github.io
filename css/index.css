@@ -1520,12 +1520,6 @@ img:not([src]) {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
 }
-img[data-lazy-src]:not(.loaded) {
-  filter: blur(8px) brightness(1);
-}
-img[data-lazy-src].error {
-  filter: none;
-}
 .img-alt {
   margin: -10px 0 10px;
   color: #858585;
@@ -6238,7 +6232,7 @@ blockquote.pullquote.right {
   filter: brightness(0.8);
 }
 [data-theme='dark'] img {
-  filter: blur(0) brightness(0.8);
+  filter: brightness(0.8);
 }
 [data-theme='dark'] #aside-content .aside-list > .aside-list-item:not(:last-child) {
   border-bottom: 1px dashed rgba(255,255,255,0.1);
@@ -9540,6 +9534,18 @@ hr:before {
   background: #00000090;
 }
 
+#waiBizhiBox::before {
+  left: 34px;
+  content: "小歪高清壁纸";
+}
+#seovxBox::before {
+  left: 30px;
+  content: "seovx美女壁纸";
+}
+#picsumBox::before {
+  left: 24px;
+  content: "picsum随机壁纸";
+}
 #bingDayBox::before {
   left: 34px;
   content: "必应每日壁纸";
@@ -9550,23 +9556,11 @@ hr:before {
 }
 #EEEDogBox::before {
   left: 20px;
-  content: "EEEDog动漫壁纸";
-}
-#seovxBox::before {
-  left: 30px;
-  content: "seovx美女壁纸";
-}
-#picsumBox::before {
-  left: 24px;
-  content: "picsum随机壁纸";
-}
-#waiBizhiBox::before {
-  left: 34px;
-  content: "小歪高清壁纸";
+  content: "韩小韩美图API壁纸";
 }
 #btstuBox::before {
   left: 34px;
-  content: "博天随机壁纸";
+  content: "随机壁纸api";
 }
 #unsplashBox::before {
   left: 15px;
