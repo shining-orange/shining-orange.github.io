@@ -8067,7 +8067,7 @@ div#archive {
   background: rgba(0, 0, 0, 0.95) !important;
 }
 [data-theme="dark"] .magnet_item {
-  background: transparent !important;
+  background: rgb(30, 30, 30) !important;
 }
 
 /* 夜间模式遮罩 */
