@@ -52,6 +52,7 @@
     object-fit: cover;
     max-height: 100%;
     border-radius: 12px;
+    width: -webkit-fill-available;
   }
   
   #bber .bber-content-img {

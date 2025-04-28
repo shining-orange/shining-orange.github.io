@@ -1119,7 +1119,7 @@ function createtime1() {
   var dnum = Math.floor(days);
 
   var ascll = [
-    `欢迎来到Orange🍊の小家!`,
+    `欢迎来到橘子🍊の小家!`,
     `Future is now 🍭🍭🍭`,
     `
         
@@ -1130,8 +1130,7 @@ function createtime1() {
     ██║   ██║██╔══██╗██╔══██║██║╚██╗██║██║   ██║██╔══╝  
     ╚██████╔╝██║  ██║██║  ██║██║ ╚████║╚██████╔╝███████╗
      ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝    
-
-                                              
+                                          
 `,
     "小站已经苟活",
     dnum,
@@ -1175,7 +1174,7 @@ function createtime2() {
   setTimeout(
     console.warn.bind(
       console,
-      "%c ⚡ Powered by Orange🍊 %c 你正在访问Orange🍊の小家",
+      "%c ⚡ Powered by Orange🍊 %c 你正在访问橘子🍊の小家",
       "color:white; background-color:#f0ad4e",
       ""
     )
@@ -3189,18 +3188,12 @@ let unsplash = "url(https://source.unsplash.com/random/1920x1080/)";
 
 
 // 更换背景(自己的代码)
-
-
-  // --default-bg: url(https://imgs.catoi.cn/v2/YPBIJEw.jpeg);
-  // --darkmode-bg:url(https://imgs.xcodey.com/v2/klASni0.jpeg);
-  // --mobileday-bg: url(https://imgs.catoi.cn/v2/39oEcWb.jpeg);
-  // --mobilenight-bg: url(https://imgs.catoi.cn/v2/oe9oV86.png);
 if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(https://i1.wp.com/dev.ruom.top/i/2025/04/24/296483.webp);
-    --darkmode-bg:url(https://i1.wp.com/dev.ruom.top/i/2025/04/24/483217.webp);
+    --default-bg: url(https://imgs.catoi.cn/v2/YPBIJEw.jpeg);
+    --darkmode-bg:url(https://imgs.xcodey.com/v2/klASni0.jpeg);
     --mobileday-bg: url(https://imgs.catoi.cn/v2/39oEcWb.jpeg);
     --mobilenight-bg: url(https://imgs.catoi.cn/v2/oe9oV86.png);
   }`;
